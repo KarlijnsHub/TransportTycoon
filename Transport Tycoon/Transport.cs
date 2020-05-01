@@ -1,8 +1,10 @@
-﻿namespace Transport_Tycoon.Models
+﻿namespace Transport_Tycoon
 {
     public class Transport
     {
         public int Id { get; set; }
+
+        public string Name { get; set; }
 
         public PassageWay TypeOfPassageWay { get; set; }
 

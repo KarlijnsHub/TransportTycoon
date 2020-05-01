@@ -1,6 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
 
-namespace Transport_Tycoon.Models
+namespace Transport_Tycoon
 {
     public class Connection
     {
@@ -24,7 +24,7 @@ namespace Transport_Tycoon.Models
         {
             if (TypeOfPassage != transport.TypeOfPassageWay)
             {
-                return transport;
+                throw new ArgumentException("Means of transport not aloud over this connection");
             }
 
             if (transport.CurrentPlace == PointA)
