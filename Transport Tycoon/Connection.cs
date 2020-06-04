@@ -32,11 +32,14 @@ namespace Transport_Tycoon
                 transport.CurrentPlace = PointB;
                 transport.HoursOnItsWay += Length;
             }
+            else if (transport.CurrentPlace != PointA && transport.CurrentPlace != PointB)
+            {
+                throw new ArgumentException("Means of transport seems to be at an invalid location");
+            }
 
             return transport;
         }
     }
-   
 
     public enum PassageWay
     {

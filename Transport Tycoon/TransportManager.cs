@@ -107,10 +107,10 @@ namespace Transport_Tycoon
             return truckToDrive;
         }
 
-    public int CalcTotalHours(Transport truck1, Transport truck2, Transport boat)
-    {
-        int truckMaxHours = Math.Max(truck1.HoursOnItsWay, truck2.HoursOnItsWay);
-        return Math.Max(truckMaxHours, boat.HoursOnItsWay + 1);
+        public int CalcTotalHours(Transport truck1, Transport truck2, Transport boat)
+        {
+            int truckMaxHours = Math.Max(truck1.HoursOnItsWay, truck2.HoursOnItsWay);
+            return Math.Max(truckMaxHours, boat.HoursOnItsWay + 1);
+        }
     }
-}
 }
